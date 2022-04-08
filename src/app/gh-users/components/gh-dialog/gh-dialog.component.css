@@ -1,0 +1,77 @@
+.box-d{
+    background: rgb(67, 76, 90);
+    font-family: sans-serif;
+    min-height: max-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 15px;
+    border: none;
+}
+.picture {
+    border-radius: 50%;
+    border: 1px solid rgb(26, 26, 48);
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    width: 160px;
+    height: 160px;
+    margin-top: 10px;
+  }
+.box-R {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    padding: 0;
+    flex-wrap: wrap;
+  
+  }
+
+  .repos {
+    display: flex;
+    flex-direction: column;
+    border: 0.1px solid rgb(61, 61, 61);
+    border-radius: 5px;
+    color: rgb(148, 147, 147);
+    font-family: sans-serif;
+    width: 270px;
+    height: 140px;
+    text-align: left;
+    justify-items: center;
+    margin: 10px;
+    padding: 5px;
+    font-family: sans-serif;
+    font-size: small;
+  
+  }
+  
+  .texto {
+    margin: 2px;
+    padding: 2px;
+    height: 100px;
+    font-size: 0.8rem;
+    overflow: hidden;
+    direction: ltr;
+    font-family: sans-serif;
+    color: rgb(148, 147, 147);
+  }
+  
+  mat-icon {
+    font-size: 1rem;
+  
+  }
+  
+  .icones {
+    height: 15px;
+    margin: 3px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    justify-items: center;
+    padding-top: 5px;
+    bottom: 0;
+    font-size: 0.8rem;
+  }

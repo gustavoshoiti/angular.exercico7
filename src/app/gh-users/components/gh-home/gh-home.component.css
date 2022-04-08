@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: violet;
+}
+.container .search{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}

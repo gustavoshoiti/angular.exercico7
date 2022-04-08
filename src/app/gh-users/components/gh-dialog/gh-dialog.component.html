@@ -1,0 +1,65 @@
+
+<!--
+    <ng-template #content>
+        <a [href]="user?.html_url" target="blank">
+            {{ user?.name }}
+        </a>
+    </ng-template>
+</div>
+-->
+
+<!--lembrete: sempre utilizar material.angular em tudo que der-->
+
+<div mat-dialog-content id="box-d">
+    <mat-progress-spinner 
+        color="accent" 
+        mode="indeterminate" 
+        *ngIf="user==null; else content"
+    ></mat-progress-spinner>
+
+    <div>
+      <ng-template #content>
+        <div>
+          <img class ="picture" src="{{user?.avatar_url}}" alt="Foto usuario">
+  
+          <a class="usuario" [href]="user?.html_url" target="_blank">
+            <h2>{{user?.name}}</h2>
+          </a>
+  
+          <div>
+            <mat-icon>account_circle</mat-icon>
+            {{user?.login}}
+          </div> <br>
+  
+          <span>{{user?.bio}}</span> <br>
+          <div>
+            <mat-icon>supervisor_account</mat-icon>
+            {{user?.followers}} followers -
+            {{user?.following}} following
+          </div> <br>
+          <div>
+            <mat-icon>location_on</mat-icon>
+            {{user?.location}}
+          </div>
+        </div>
+      </ng-template>
+    </div>
+    <div>
+      <h2>Repositórios</h2>
+  
+      <div class="box-R">
+  
+        <div mat-card class="repos" *ngFor="let itens of reposi">
+          <a mat-card-title class="nomeRepos" [href]="itens?.html_url" target="_blank"> {{itens?.name}}</a>
+  
+          <span mat-card-content title={{itens?.description}} class="texto">{{itens?.description}}</span>
+  
+          <p class="icones">
+            <mat-icon> radio_button_unchecked </mat-icon> {{itens?.language}} - - <mat-icon>star_border</mat-icon>
+            {{itens?.stargazers_count}}
+          </p>
+        </div>
+      </div>
+    </div>
+  
+  </div>
